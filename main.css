@@ -25,10 +25,29 @@ body {
     grid-row: 1 / span 2;
 }
 
+#menu svg {
+    height: 4rem;
+    display: inline-block;
+    margin-right: 0.75rem;
+}
+
+#menu > div:first-child {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#menu h2 {
+    display: inline;
+    font-size: 1.75rem;
+}
+
 #header {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 1rem 2rem;
 }
 
 #main {
@@ -63,8 +82,27 @@ body {
     box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
+.projects > div svg {
+    height: 2rem;
+}
+
+ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding-bottom: 0.5rem;
+}
+
+#menu ul li svg {
+    height: 2.5rem;
+    margin-right: 1.5rem;
+    display: inline;
+}
+
 ul:first-of-type {
-    margin: 2rem 0;
+    margin: 4rem 0;
 }
 
 button {
@@ -72,14 +110,20 @@ button {
     color: var(--bg);
 }
 
-.hiThere {
-    display: flex;
+.avatarSmall {
+    height: 4rem;
+    width: 4rem;
+    margin: auto 1.5rem;
+    background-image: url(a-1.jpg);
+    background-size: 200%;
+    background-position: top;
+    border-radius: 100%;
 }
 
 .avatarBig {
     height: 6rem;
     width: 6rem;
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     background-image: url(a-1.jpg);
     background-size: 200%;
     background-position: top;
@@ -88,4 +132,24 @@ button {
 
 .hiThere > div:nth-child(2) {
     margin: auto 0;
+}
+
+#header > div {
+    margin: auto;
+    width: 100%;
+}
+
+.hiThere {
+    display: flex;
+    margin-left: 0 !important;
+}
+
+#header > div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+#header > div svg {
+    height: 2rem;
 }
