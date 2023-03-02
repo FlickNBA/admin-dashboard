@@ -19,6 +19,16 @@ body {
     grid-template-rows: 1fr 5fr;
 }
 
+button {
+    background-color: var(--dark);
+    color: var(--bg);
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+    font-weight: 500;
+    font-size: 1.25rem;
+    border: none;
+}
+
 #menu {
     background-color: var(--dark);
     color: var(--bg);
@@ -47,7 +57,7 @@ body {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
 }
 
 #main {
@@ -55,6 +65,7 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
+    padding: 2rem 0 4rem;
 }
 
 #sidebar {
@@ -66,7 +77,8 @@ body {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    grid-auto-rows: 1fr;
+    gap: 2rem;
     padding: 1rem;
 }
 
@@ -78,11 +90,21 @@ body {
     border-radius: 0.5rem;
 }
 
-.projects > div, .shadow {
+.projects > div {
+    position: relative;
     box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
 }
 
-.projects > div svg {
+.social {
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    right: 0;
+}
+
+.social svg {
+    display: inline-block;
+    margin: 0.5rem;
     height: 2rem;
 }
 
@@ -105,15 +127,10 @@ ul:first-of-type {
     margin: 4rem 0;
 }
 
-button {
-    background-color: var(--dark);
-    color: var(--bg);
-}
-
 .avatarSmall {
     height: 4rem;
     width: 4rem;
-    margin: auto 1.5rem;
+    margin: auto 2rem;
     background-image: url(a-1.jpg);
     background-size: 200%;
     background-position: top;
@@ -144,10 +161,33 @@ button {
     margin-left: 0 !important;
 }
 
+#header > div:nth-child(1) svg {
+    margin-right: 1rem;
+}
+
+#header > div:nth-child(1) input {
+    width: 100%;
+    border: none;
+    background-color: rgba(149, 177, 165, 0.3333);
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+#header > div:nth-child(1) {
+    display: flex;
+    align-items: center;
+}
+
 #header > div:nth-child(2) {
     display: flex;
     align-items: center;
     justify-content: end;
+}
+
+#header > div:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 #header > div svg {
