@@ -22,7 +22,7 @@ body {
 button {
     background-color: var(--dark);
     color: var(--bg);
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 2.5rem;
     border-radius: 2rem;
     font-weight: 500;
     font-size: 1.25rem;
@@ -222,19 +222,30 @@ ul:first-of-type {
 }
 
 #sidebar > div > div {
-    padding: 1.5rem;
+    padding: 1rem;
     margin-bottom: 2rem;
     background-color: var(--bg);
     box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
     border-radius: 0.5rem;
 }
 
+.announcements > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 #sidebar > div > div:last-child {
     margin-bottom: 0;
 }
 
+#TEST h1 {
+    color: var(--dark);
+}
+
 .announcements h2, .trending h2 {
     padding-top: 1rem;
+    color: var(--dark);
 }
 
 .announcements > div:nth-child(2) {
@@ -245,6 +256,7 @@ ul:first-of-type {
 
 .announcements > div > div:not(.announcements > div > div:last-child) {
     border-bottom: 2px solid var(--medium);
+    margin-bottom: 0.5rem;
 }
 
 .trending > div:nth-child(2) {
@@ -254,7 +266,7 @@ ul:first-of-type {
 }
 
 .trending .avatarSmall {
-    margin-left: 0 !important;
+    margin: 0 1rem 0 0 !important;
 }
 
 .trending > div:nth-child(2) > div:nth-child(1) .avatarSmall {
@@ -271,4 +283,25 @@ ul:first-of-type {
 
 .trending > div:nth-child(2) > div:nth-child(4) .avatarSmall {
     background-image: url(a-5.jpg);
+}
+
+.trending > div:nth-child(2) > div {
+    display: flex;
+    align-items: center;
+}
+
+.trending > div:nth-child(2) > div h4, .announcements > div:nth-child(2) > div h4 {
+    font-size: 1.125rem;
+    color: var(--dark);
+    font-weight: 500;
+}
+
+.trending > div:nth-child(2) > div p, .announcements > div:nth-child(2) > div p {
+    font-size: 1rem;
+    color: rgba(64, 99, 80, 0.75);
+    font-weight: 300;
+}
+
+.announcements > div:nth-child(2) > div h4, .announcements > div:nth-child(2) > div p {
+    padding: 0 1rem;
 }
