@@ -22,7 +22,7 @@ body {
 button {
     background-color: var(--dark);
     color: var(--bg);
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 2rem;
     font-weight: 500;
     font-size: 1.25rem;
@@ -49,6 +49,7 @@ button {
 }
 
 #menu h2 {
+    /* I LOVE AGATA */
     display: inline;
     font-size: 1.75rem;
 }
@@ -57,7 +58,7 @@ button {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
 }
 
 #main {
@@ -65,7 +66,14 @@ button {
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr;
-    padding: 2rem 0 4rem;
+    padding-bottom: 2rem;
+}
+
+#TEST {
+    grid-column: 1 / span 2;
+    display: flex;
+    align-items: center;
+    margin-bottom: -1rem;
 }
 
 #sidebar {
@@ -77,22 +85,31 @@ button {
 .projects {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2rem 1fr;
     grid-auto-rows: 1fr;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1rem 2rem;
 }
 
-.projects > div {
-    padding: 1rem;
+.projects > div:not(#TEST) {
+    padding: 1.5rem;
     background-color: var(--bg);
-    border-left: 0.5rem solid var(--dark);
+    border-left: 0.75rem solid var(--dark);
     color: var(--text);
     border-radius: 0.5rem;
-}
-
-.projects > div {
+    padding-top: 2rem;
     position: relative;
     box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.projects h3 {
+    font-size: 1.3333rem;
+}
+
+.projects p {
+    font-weight: 300;
+    font-size: 1rem;
+    padding-right: 2rem;
 }
 
 .social {
@@ -104,8 +121,8 @@ button {
 
 .social svg {
     display: inline-block;
-    margin: 0.5rem;
-    height: 2rem;
+    margin: 0.25rem;
+    height: 1.5rem;
 }
 
 ul li {
@@ -131,7 +148,7 @@ ul:first-of-type {
     height: 4rem;
     width: 4rem;
     margin: auto 2rem;
-    background-image: url(a-1.jpg);
+    background-image: url(a-2.jpg);
     background-size: 200%;
     background-position: top;
     border-radius: 100%;
@@ -141,7 +158,7 @@ ul:first-of-type {
     height: 6rem;
     width: 6rem;
     margin-right: 1.5rem;
-    background-image: url(a-1.jpg);
+    background-image: url(a-2.jpg);
     background-size: 200%;
     background-position: top;
     border-radius: 100%;
@@ -192,4 +209,66 @@ ul:first-of-type {
 
 #header > div svg {
     height: 2rem;
+}
+
+#sidebar {
+    padding: 1rem 2rem 1rem 0;
+}
+
+#sidebar > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4rem 1fr;
+}
+
+#sidebar > div > div {
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    background-color: var(--bg);
+    box-shadow: 0.25rem 0.25rem 1rem 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+}
+
+#sidebar > div > div:last-child {
+    margin-bottom: 0;
+}
+
+.announcements h2, .trending h2 {
+    padding-top: 1rem;
+}
+
+.announcements > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);    
+}
+
+.announcements > div > div:not(.announcements > div > div:last-child) {
+    border-bottom: 2px solid var(--medium);
+}
+
+.trending > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);    
+}
+
+.trending .avatarSmall {
+    margin-left: 0 !important;
+}
+
+.trending > div:nth-child(2) > div:nth-child(1) .avatarSmall {
+    background-image: url(a-1.jpg);
+}
+
+.trending > div:nth-child(2) > div:nth-child(2) .avatarSmall {
+    background-image: url(a-4.jpg);
+}
+
+.trending > div:nth-child(2) > div:nth-child(3) .avatarSmall {
+    background-image: url(a-3.jpg);
+}
+
+.trending > div:nth-child(2) > div:nth-child(4) .avatarSmall {
+    background-image: url(a-5.jpg);
 }
